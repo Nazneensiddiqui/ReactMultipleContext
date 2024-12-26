@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const Context=()=>{
     const[bgColor , setBgcolor]=useState("yellow")
+    const [cnt, setcnt]=useState(0)
     return(
         <>
        <center>
@@ -16,6 +17,10 @@ const Context=()=>{
     <button onClick={()=>{setBgcolor("skyblue")}}>Skyblue</button>
     <button onClick={()=>{setBgcolor("brown")}}>Brown</button>
     <button onClick={()=>{setBgcolor("deeppink")}}>deeppink</button>
+    <br/><br/>
+    <button onClick={()=>{setcnt(cnt+100)}}>Increment</button>
+    <h1>{cnt}</h1>
+    <button onClick={()=>{setcnt(cnt-100)}}>Decrement</button>
     </center>
         
         </>
